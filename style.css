@@ -1,0 +1,253 @@
+/* === VARIÁVEIS DE CORES E TEMA === */
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #ffffff;
+    --neon-red: #ff003c;
+    --neon-green: #00ff33;
+    --neon-yellow: #ffcc00;
+    --gold: #ffd700;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95)), url('Public/Img/Aparelhagem_01.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--neon-red), 0 0 30px var(--neon-yellow);
+    border: 3px solid var(--neon-yellow);
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: var(--neon-red);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #8a0020, 4px 4px 0px #520013, 6px 6px 0px #240008, 0 0 20px var(--neon-yellow), 0 0 40px var(--neon-red);
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+/* === NOVA SEÇÃO: SOBRE O TEMA === */
+.about-section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--neon-red);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.neon-subtitle {
+    font-family: 'Bungee', cursive;
+    color: var(--neon-yellow);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--neon-yellow), 0 0 20px var(--gold);
+    letter-spacing: 1px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.about-section strong {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+/* === SEÇÃO DE INFORMAÇÕES === */
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--neon-green);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: inset 0 0 20px rgba(0, 255, 51, 0.1), 0 0 15px rgba(0, 255, 51, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.info-item { margin-bottom: 1.5rem; }
+.info-item:last-child { margin-bottom: 0; }
+
+.info-label {
+    font-family: 'Bungee', cursive;
+    color: var(--neon-yellow);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px var(--gold);
+}
+
+.info-text { font-size: 1.2rem; font-weight: 700; line-height: 1.4; }
+
+.aparelhagem-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 0 20px var(--neon-red);
+}
+
+/* === NOVA SEÇÃO: MÍDIAS (YouTube / Spotify) === */
+.media-section {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.video-container, .spotify-container {
+    width: 100%;
+    max-width: 600px; /* Evita que fique gigante no PC */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    border: 2px solid var(--neon-yellow);
+    background: #000;
+}
+
+/* Deixa o YouTube responsivo (mantém a proporção 16:9 no celular) */
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    display: block;
+}
+
+.spotify-container iframe {
+    display: block;
+}
+
+/* === BOTÃO === */
+.btn-confirm {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--neon-red), #ff6b00);
+    color: white;
+    font-family: 'Bungee', cursive;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px var(--neon-red);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite; 
+}
+
+.btn-confirm:hover { box-shadow: 0 0 25px var(--neon-yellow); transform: scale(1.05); }
+.btn-confirm:active { transform: scale(0.95); }
+
+/* === ANIMAÇÕES === */
+.hidden { opacity: 0; transform: translateY(40px); }
+.show { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 15px var(--neon-red); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px var(--neon-red); }
+    100% { transform: scale(1); box-shadow: 0 0 15px var(--neon-red); }
+}
+
+.neon-flicker { animation: flicker 4s infinite alternate; }
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 2px 2px 0px #8a0020, 4px 4px 0px #520013, 0 0 20px var(--neon-yellow), 0 0 40px var(--neon-red); }
+    20%, 24%, 55% { text-shadow: none; }
+}
+
+/* === RESPONSIVIDADE (PC) === */
+@media (min-width: 768px) {
+    .container { padding: 4rem 2rem; }
+    h1 { font-size: 4.5rem; }
+    .hero-image { max-width: 500px; }
+    .about-section p { font-size: 1.3rem; }
+    
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+
+/* === ANIMAÇÕES JS EXTRAS (Lasers e Transições) === */
+
+/* Transição padrão para o efeito 3D dos cards */
+.info-card, .about-section, .video-container, .spotify-container {
+    transition: transform 0.5s ease;
+}
+
+.aparelhagem-img {
+    transition: transform 0.15s ease-out; /* Para a batida do grave ficar rápida */
+}
+
+/* Estilo do laser dinâmico gerado pelo JS */
+.festa-laser {
+    position: fixed;
+    bottom: -20vh;
+    width: 3px;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none; /* Para não atrapalhar os cliques do usuário */
+    z-index: -1; /* Fica atrás de todo o conteúdo, mas na frente do fundo */
+    animation: atirar-laser linear forwards;
+    transform-origin: bottom center;
+}
+
+@keyframes atirar-laser {
+    0% { transform: translateY(0) scaleY(0); opacity: 0; }
+    30% { opacity: 0.6; }
+    100% { transform: translateY(-120vh) scaleY(1); opacity: 0; }
+}
