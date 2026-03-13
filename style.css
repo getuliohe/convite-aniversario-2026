@@ -83,7 +83,7 @@ h1 {
     color: var(--neon-yellow);
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px var(--neon-yellow), 0 0 30px var(--gold);
+    /* text-shadow: 0 0 20px var(--neon-yellow), 0 0 30px var(--gold); */
     letter-spacing: 1px;
 }
 
